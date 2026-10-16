@@ -1,0 +1,53 @@
+{
+  "name": "Vibin — Your Space, Your Vibe",
+  "short_name": "Vibin",
+  "description": "See your room's next vibe before spending money. India-first AI room makeovers for students, renters and young homes.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F4EE",
+  "theme_color": "#7E482C",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/vibin-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["lifestyle", "shopping", "utilities"],
+  "shortcuts": [
+    {
+      "name": "Redesign My Room",
+      "url": "/create",
+      "description": "Start a new room makeover"
+    },
+    {
+      "name": "Saved Designs",
+      "url": "/saved",
+      "description": "View your saved makeover vibes"
+    },
+    {
+      "name": "Shop Checklist",
+      "url": "/checklist",
+      "description": "Explore budget decor checklist"
+    }
+  ]
+}

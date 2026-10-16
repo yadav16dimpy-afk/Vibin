@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Luminous, Bright & Sunlit Color System */
+    --bg-base: #FFFFFF;          /* Pure Crisp White */
+    --bg-secondary: #FFF9F5;     /* Soft Sunlit Peach-White */
+    --text-primary: #1E2229;     /* Deep Crisp Charcoal Ink */
+    --text-muted: #64748B;       /* Clear Slate Muted */
+    --accent-primary: #FF5738;   /* Radiant Coral Terracotta */
+    --accent-amber: #FFB703;     /* Sunny Marigold Gold */
+    --accent-mint: #10B981;      /* Fresh Mint Green */
+    --border-subtle: rgba(255, 87, 56, 0.12);
+  }
+
+  * {
+    border-color: rgba(30, 34, 41, 0.08);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #FFFFFF;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #1E2229;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::selection {
+    background-color: #FF5738;
+    color: #FFFFFF;
+  }
+
+  /* Sleek hairline scrollbar with bright terracotta thumb */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FFFFFF;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #FFD9CE;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FF5738;
+  }
+}
+
+/* Luminous Architectural Blueprint Grid (Pure White base + subtle warm grid) */
+.bg-blueprint-grid {
+  background-color: #FFFFFF;
+  background-image: 
+    linear-gradient(to right, rgba(255, 87, 56, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 87, 56, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-dot-grid {
+  background-color: #FFFFFF;
+  background-image: radial-gradient(rgba(255, 87, 56, 0.10) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Bright Glassmorphism Navigation */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 87, 56, 0.12);
+  box-shadow: 0 2px 12px -2px rgba(255, 87, 56, 0.04);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 87, 56, 0.12);
+}
+
+/* Signature Roll-Up Button Micro-Interactions */
+.btn-heron {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-heron .label-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.btn-heron .label-top {
+  display: block;
+  transform: translateY(0%);
+  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-heron:hover .label-top {
+  transform: translateY(-110%);
+}
+
+.btn-heron .label-bot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  transform: translateY(110%);
+  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-heron:hover .label-bot {
+  transform: translateY(0%);
+}
+
+.btn-heron .icon-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-heron .icon-top {
+  transform: translateX(0%);
+  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-heron:hover .icon-top {
+  transform: translateX(120%);
+}
+
+.btn-heron .icon-bot {
+  position: absolute;
+  transform: translateX(-120%);
+  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-heron:hover .icon-bot {
+  transform: translateX(0%);
+}
+
+/* Infinite Telemetry Marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Blueprint Scanline Effect (Glowing Radiant Coral) */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+.blueprint-scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 87, 56, 0.95), transparent);
+  animation: scanline 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

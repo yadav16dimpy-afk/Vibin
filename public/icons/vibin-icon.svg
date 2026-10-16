@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="coffeeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7E482C" />
+      <stop offset="100%" stop-color="#582F1A" />
+    </linearGradient>
+    <linearGradient id="latteGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5DCB0" />
+      <stop offset="100%" stop-color="#C78F38" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#34190C" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- App Rounded Squircle Background (Warm Coffee & Teak) -->
+  <rect width="512" height="512" rx="120" fill="url(#coffeeGrad)" />
+
+  <!-- Architectural Arch (Warm Oat Sand Doorway / Room Nook) -->
+  <path d="M 156 410 L 156 256 C 156 200, 200 156, 256 156 C 312 156, 356 200, 356 256 L 356 410 Z" 
+        fill="#F8F4EE" 
+        filter="url(#softShadow)" />
+
+  <!-- Inner Vibe Lamp & Caramel Glow -->
+  <circle cx="256" cy="256" r="34" fill="url(#latteGlow)" />
+  <path d="M 256 180 L 256 222" stroke="#5E735B" stroke-width="8" stroke-linecap="round" />
+  
+  <!-- Subtle Vibe Rays / Sparkles -->
+  <path d="M 256 110 L 256 130 M 340 180 L 356 170 M 172 180 L 156 170" 
+        stroke="#F8F4EE" 
+        stroke-width="8" 
+        stroke-linecap="round" />
+
+  <!-- Floor line -->
+  <rect x="136" y="404" width="240" height="12" rx="6" fill="#F8F4EE" />
+  
+  <!-- Stylized Sparkles ✨ for AI transformation -->
+  <path d="M 360 110 Q 360 140 390 140 Q 360 140 360 170 Q 360 140 330 140 Q 360 140 360 110 Z" fill="#F5DCB0" />
+  <path d="M 140 280 Q 140 295 155 295 Q 140 295 140 310 Q 140 295 125 295 Q 140 295 140 280 Z" fill="#5E735B" opacity="0.8" />
+</svg>
